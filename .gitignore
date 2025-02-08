@@ -1,0 +1,23 @@
+# Create and edit .gitignore
+echo "# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Ignore override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# Ignore any .tfvars files that are generated automatically for each Terraform run
+*.tfvars" > .gitignore
