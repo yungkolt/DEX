@@ -25,3 +25,11 @@ module "ec2" {
   project       = var.project_name
   aws_region    = var.aws_region
 }
+
+# Add ECS module
+module "ecs" {
+  source    = "./modules/ecs"
+  project   = var.project_name
+  subnet_id = module.vpc.public_subnet_id
+  sg_id     = module.security.security_group_id
+}
